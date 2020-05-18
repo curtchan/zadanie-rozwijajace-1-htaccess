@@ -16,10 +16,24 @@ Rozwinięcie wiedzy z zakresu korzystania z .htaccess
 * Poniższe adresy powinny zwracać status 200
 ** `http://twoja_domena`
 ** `https://twoja_domena`
-### Stwórz przekierowanie na HTTPS ###
+### Przekierowania ###
+#### Stwórz przekierowanie na HTTPS ####
 * w pliku `.htaccess` stwórz regułę która przekieruje ruch na stronę z aktywnym certyfikatem SSL
 * [httpstatus.io](https://httpstatus.io/) adres HTTP powinien zwracać status 301 i kierować na adres HTTPS, adres HTTPS powinien zwracać nadal 200
 
-### Stwóz przekierowanie na HTTPS typu 'catch-all' ###
+#### Stwóz przekierowanie na HTTPS typu 'catch-all' ####
 * Czyli nie używając nazwy domeny przy tworzeniu przekierowania
 * W celu przetestowania możesz podpiąć drugą domenę pod katalog na serwerze i sprawdzić czy również dla niej [httpstatus.io](https://httpstatus.io/) zwróci status 301 z adresu HTTP na HTTPS
+
+#### Przekieruj podstronę ####
+* Przekieruj z podstrony `podstrona-2.php` na `podstrona-3.php`
+
+### Inne zadania z htaccess ###
+#### Zabezpieczanie dostępu ####
+* Skonfiguruj htaccess tak aby dostęp do `zabezpieczona.php` był dodatkowo zabezpieczony loginem i hasłem
+
+#### Modyfikowanie adresu ####
+* Skonfiguruj htaccess tak aby rozszerzenie było ukryte przy wejściu na podstronę `bez-rozszerzenia.php`
+
+#### Dokument błędu ####
+* W przypadku wejścia na podstronę która nie istnieje, wyświetl plik `404.php`

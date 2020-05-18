@@ -1,0 +1,1 @@
+Ta podstrona powinna być dostępna tylko po wpisaniu hasła
